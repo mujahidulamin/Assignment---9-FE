@@ -74,7 +74,7 @@ const LoginPage = () => {
                 .
               </p>
               <div className="flex justify-start">
-                <Button htmlType="submit" type="primary">Login</Button>
+                <Button htmlType="submit">Login</Button>
               </div>
             </Form>
           </div>

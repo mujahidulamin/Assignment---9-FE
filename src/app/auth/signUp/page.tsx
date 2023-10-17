@@ -98,7 +98,7 @@ const SignUpPage = () => {
               .
             </p>
             <div className="flex justify-start">
-              <Button className="mt-2" htmlType="submit" type="primary">
+              <Button className="mt-2" htmlType="submit">
                 Sign Up
               </Button>
             </div>

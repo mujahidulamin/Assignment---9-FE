@@ -76,7 +76,7 @@ const Header = () => {
             color: "black",
           }}
         >
-          <Switch
+          {/* <Switch
             onChange={(checked) => {
               if (checked) {
                 setToLocalStorage("theme", JSON.stringify({ theme: "dark" }));
@@ -89,7 +89,7 @@ const Header = () => {
             checkedChildren={<BugOutlined />}
             unCheckedChildren={<FireOutlined />}
             defaultChecked={theme?.theme === "dark" ? true : false}
-          />
+          /> */}
         </p>
         <Dropdown menu={{ items }}>
           <a>

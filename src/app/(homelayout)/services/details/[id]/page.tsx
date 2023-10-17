@@ -8,9 +8,10 @@ import {
 } from "@/redux/api/reviewApi";
 import { useSingleServiceQuery } from "@/redux/api/serviceApi";
 import { getUserInfo } from "@/services/auth.service";
-import { message } from "antd";
+import { Rate, message } from "antd";
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 
 type IDProps = {
   params: any;
@@ -18,6 +19,7 @@ type IDProps = {
 const ServiceDetailsPage = ({ params }: IDProps) => {
   const { id } = params;
   const { userId } = getUserInfo() as any;
+  const [value, setValue] = useState(1);
 
   const { data, isLoading } = useSingleServiceQuery(id);
   const { data: reviews, isLoading: isReviewLoading } = useGetReviewsQuery(id);
@@ -31,6 +33,7 @@ const ServiceDetailsPage = ({ params }: IDProps) => {
       user_id: userId,
       service_id: data?._id,
       comment: comment,
+      rating: value,
     };
     const response = await addReview(options).unwrap();
     if (response?._id) {
@@ -156,6 +159,9 @@ const ServiceDetailsPage = ({ params }: IDProps) => {
                         <p className="py-2 leading-none text-md font-medium text-gray-400">
                           {review?.comment}
                         </p>
+                        <div className="text-xs">
+                          <Rate disabled defaultValue={review?.rating} />
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -170,17 +176,29 @@ const ServiceDetailsPage = ({ params }: IDProps) => {
                 className="block p-2.5 w-full md:w-[400px] h-[150px] text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-teal-600 focus:border-teal-600"
                 placeholder="Write your thoughts here..."
               ></textarea>
-              <div className="flex justify-center mt-6">
-                <button
-                  type="submit"
-                  className="group relative inline-block text-sm font-medium text-teal-600 focus:outline-none active:text-teal-600"
-                >
-                  <span className="absolute inset-0 border border-current rounded-md"></span>
-                  <span className="block border border-current bg-white px-8 md:px-12 py-3 rounded-md transition-transform group-hover:-translate-x-1 group-hover:-translate-y-1">
-                    Submit
-                  </span>
-                </button>
+ <div className="m-3">
+                <Rate onChange={setValue} value={value} />
               </div>
+
+              {userId ? (
+                <div className="flex justify-center mt-6">
+                  <button
+                    type="submit"
+                    className="group relative inline-block text-sm font-medium text-teal-600 focus:outline-none active:text-teal-600"
+                  >
+                    <span className="absolute inset-0 border border-current rounded-md"></span>
+                    <span className="block border border-current bg-white px-8 md:px-12 py-3 rounded-md transition-transform group-hover:-translate-x-1 group-hover:-translate-y-1">
+                      Submit
+                    </span>
+                  </button>
+                </div>
+              ) : (
+                <div className="flex justify-center mt-2">
+                  <small className="text-violet-400">
+                    Please Login First to Comment
+                  </small>
+                </div>
+              )}
             </form>
           </div>
         </div>

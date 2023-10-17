@@ -1,6 +1,6 @@
 "use client";
 import { Button, Col, Row, message } from "antd";
-import loginImage from "../../../assets/register-pana.png";
+import loginImage from "../../../assets/register.png";
 import Image from "next/image";
 import Form from "@/components/Forms/Form";
 import FormInput from "@/components/Forms/FormInput";
@@ -45,15 +45,13 @@ const SignUpPage = () => {
         minHeight: "100vh",
       }}
     >
-      <Col className="hidden md:block" sm={12} md={16} lg={10}>
-        <Image src={loginImage} width={500} alt="login image" />
-      </Col>
-      <Col className="mx-10 md:mx-0" sm={12} md={8} lg={8}>
-        <h1 className="my-4 text-center text-xl">Register new account</h1>
+
+<Col className="mx-10 md:mx-0" sm={12} md={8} lg={8}>
+        <h1 className="my-4 text-center text-4xl mb-6 font-bold">Create an Account</h1>
         <div>
           <Form submitHandler={onSubmit}>
-            <div className="flex gap-4">
-              <div>
+
+              <div className="mt-4">
                 <FormInput
                   name="name.firstName"
                   type="text"
@@ -61,7 +59,8 @@ const SignUpPage = () => {
                   label="First Name"
                 />
               </div>
-              <div>
+
+            <div className="mt-4">
                 <FormInput
                   name="name.lastName"
                   type="text"
@@ -69,7 +68,6 @@ const SignUpPage = () => {
                   label="Last Name"
                 />
               </div>
-            </div>
             <div className="mt-4">
               <FormInput name="email" type="email" size="large" label="Email" />
             </div>
@@ -89,23 +87,27 @@ const SignUpPage = () => {
                 label="Password"
               />
             </div>
-            <p className="px-6 text-sm mt-2 mb-5 text-start dark:text-gray-400">
+            <p className="text-sm mt-5 mb-5 text-start dark:text-gray-400 text">
               Already have an account?{" "}
               <Link
                 href="/auth/login"
-                className="hover:underline text-violet-400"
+                className="hover:underline text-blue-400"
               >
                 Login
               </Link>
               .
             </p>
-            <div className="flex justify-center">
-              <Button className="mt-4" htmlType="submit">
-                Register
+            <div className="flex justify-start">
+              <Button className="mt-2" htmlType="submit" type="primary">
+                Sign Up
               </Button>
             </div>
           </Form>
         </div>
+      </Col>
+
+      <Col className="hidden md:block" sm={12} md={16} lg={10}>
+        <Image src={loginImage} width={500} alt="login image" />
       </Col>
     </Row>
   );

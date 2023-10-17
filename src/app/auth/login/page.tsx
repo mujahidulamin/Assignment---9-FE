@@ -32,7 +32,7 @@ const LoginPage = () => {
     }
   };
 
-  return (
+  return (    
     <Row
       justify="center"
       align="middle"

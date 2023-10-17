@@ -8,6 +8,7 @@ import {
 import { Tooltip, message } from "antd";
 import dayjs from "dayjs";
 import Image from "next/image";
+import { useAuth } from "@/utils/checkAuth";
 
 const BookingPage = () => {
   const { data, isLoading } = useUserAppointmentsQuery(undefined);
@@ -24,7 +25,8 @@ const BookingPage = () => {
     return;
   };
 
-  if (isLoading) return <Loading />;
+  const userAuth = useAuth();
+  if (isLoading || userAuth) return <Loading />;
 
   return (
     <section className=" text-gray-800 min-h-screen">

@@ -12,7 +12,16 @@ export const feedbackApi = baseApi.injectEndpoints({
       }),
       invalidatesTags: [tagTypes.feedback],
     }),
+
+
+    getFeedback: build.query({
+      query: (arg: Record<string, any>) => ({
+        url: `${FEEDBACK_URL}/`,
+        method: "GET",
+      }),
+      providesTags: [tagTypes.feedback],
+    }),
   }),
 });
 
-export const { useAddFeedbackMutation } = feedbackApi;
+export const { useAddFeedbackMutation, useGetFeedbackQuery } = feedbackApi;

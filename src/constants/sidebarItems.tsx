@@ -5,8 +5,8 @@ import {
   TableOutlined,
   AppstoreOutlined,
   UserOutlined,
-  BugOutlined,
-  GoldOutlined,
+  BookOutlined,
+  ControlOutlined,
   HomeOutlined,
 } from "@ant-design/icons";
 import Link from "next/link";
@@ -31,7 +31,7 @@ export const sidebarItems = (role: string) => {
           Service Management
         </Link>
       ),
-      icon: <GoldOutlined />,
+      icon: <ControlOutlined />,
       key: `/dashboard/${role}/serviceManagement`,
     },
     {
@@ -40,7 +40,7 @@ export const sidebarItems = (role: string) => {
           Booking Management
         </Link>
       ),
-      icon: <BugOutlined />,
+      icon: <BookOutlined />,
       key: `/dashboard/${role}/bookingManagement`,
     },
     {

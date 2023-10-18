@@ -52,7 +52,7 @@ const ServicesPage = () => {
   };
 
   return (
-    <section className="bg-white my-10 max-w-[1200px] mx-auto">
+    <section className="bg-white mt-12 max-w-[1200px] mx-auto">
       <div className="flex justify-between mb-5">
         <div className="relative">
           <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
@@ -78,14 +78,14 @@ const ServicesPage = () => {
               setSearchTerm(e.target.value);
             }}
             className="block w-full p-1.5 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50"
-            placeholder="Search..."
+            placeholder="Search . . ."
             required
           />
         </div>
-        <div className="flex gap-2">
+        <div className="flex gap-4">
           <Select
             showSearch
-            placeholder="Sort by"
+            placeholder="Filter by"
             onChange={onSortChange}
             options={[
               {
@@ -95,6 +95,10 @@ const ServicesPage = () => {
               {
                 value: "description",
                 label: "Description",
+              },
+              {
+                value: "price",
+                label: "Price",
               },
             ]}
           />
@@ -115,7 +119,7 @@ const ServicesPage = () => {
           />
         </div>
       </div>
-      <div className="mb-2">
+      <div className="mb-6">
         <BreadCrumb
           items={[
             {
@@ -129,7 +133,7 @@ const ServicesPage = () => {
           ]}
         />
       </div>
-      <div className="grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-4 mx-6 md:mx-0">
+      <div className="grid gap-8 row-gap-5 mb-8 lg:grid-cols-3 lg:row-gap-8">
         {isLoading && [1, 2, 3, 4].map((n) => <SkeletonCard key={n} />)}
         {data?.services?.map((service: any) => (
           <ServiceCard service={service} key={service?._id} />

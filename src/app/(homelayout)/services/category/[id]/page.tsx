@@ -104,6 +104,10 @@ const CategoryServicePage = ({ params }: IDProps) => {
                 value: "description",
                 label: "Description",
               },
+              {
+                value: "price",
+                label: "Price",
+              },
             ]}
           />
           <Select
@@ -123,7 +127,7 @@ const CategoryServicePage = ({ params }: IDProps) => {
           />
         </div>
       </div>
-      <div className="mb-2">
+      <div className="mb-6">
         <BreadCrumb
           items={[
             {
@@ -141,7 +145,7 @@ const CategoryServicePage = ({ params }: IDProps) => {
           ]}
         />
       </div>
-      <div className="grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-4 mx-6 md:mx-0">
+      <div className="grid gap-8 row-gap-5 mb-8 lg:grid-cols-3 lg:row-gap-8">
         {isLoading && [1, 2, 3, 4].map((n) => <SkeletonCard key={n} />)}
         {data?.services?.map((service: any) => (
           <ServiceCard service={service} key={service?._id} />

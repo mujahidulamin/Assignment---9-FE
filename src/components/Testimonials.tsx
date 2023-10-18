@@ -12,6 +12,14 @@ const Testimonials = () => {
   return (
 
     <section className="bg-white my-10 max-w-[1200px] mx-auto">
+
+<div className  ="text-center mb-6">
+
+    <h1 className="text-2xl font-semibold text-gray-800 capitalize lg:text-4xl lg:font-bold text-center">
+            Client Reviews
+          </h1> 
+    </div>
+
       {
 		data?.map((feedback: any , index: any) => <div key={feedback?._id} className="container flex flex-col w-full max-w-lg p-6 mx-auto divide-y rounded-md divide-gray-700 dark:bg-gray-900 dark:text-gray-100">
 		<div className="flex justify-between p-4">

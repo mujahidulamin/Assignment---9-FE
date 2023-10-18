@@ -2,6 +2,8 @@ import { tagTypes } from "../tagTypes";
 import { baseApi } from "./baseApi";
 const FEEDBACK_URL = "/feedback";
 
+//feedback api
+
 export const feedbackApi = baseApi.injectEndpoints({
   endpoints: (build) => ({
     addFeedback: build.mutation({

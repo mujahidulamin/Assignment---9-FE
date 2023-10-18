@@ -3,6 +3,8 @@ import { tagTypes } from "../tagTypes";
 import { baseApi } from "./baseApi";
 const NEWS_URL = "/news";
 
+//news api
+
 export const newsApi = baseApi.injectEndpoints({
   endpoints: (build) => ({
     getAllNews: build.query({

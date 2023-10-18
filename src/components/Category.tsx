@@ -6,38 +6,6 @@ import { useGetAllCategoryQuery } from "@/redux/api/categoryApi";
 
 const Category = () => {
   const { data, isLoading } = useGetAllCategoryQuery({});
-  const Categories = [
-    {
-      id: 1,
-      name: "Paint & Repair",
-      value: "paint_and_repair",
-    },
-    {
-      id: 2,
-      name: "Wallpaper",
-      value: "wallpaper",
-    },
-    {
-      id: 3,
-      name: "Commercial Painting",
-      value: "commercial_painting",
-    },
-    {
-      id: 4,
-      name: "Cabinet",
-      value: "cabinet",
-    },
-    {
-      id: 5,
-      name: "Wall Paint",
-      value: "wall_paint",
-    },
-    {
-      id: 6,
-      name: "Color Consultation",
-      value: "color_consultation",
-    },
-  ];
   return (
     <section className="bg-white max-w-[1200px] mx-auto my-10">
       <div className="px-6 py-10">

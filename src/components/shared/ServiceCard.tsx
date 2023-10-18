@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const ServiceCard = ({ service }: any) => {
   return (
-    <div className="flex flex-col h-full w-full overflow-hidden bg-white rounded-lg shadow-lg">
+    <div className="flex flex-col h-full w-full overflow-hidden rounded-lg shadow-lg bg-gray-100">
       <Image
         src={service?.image_url}
         width={1000}

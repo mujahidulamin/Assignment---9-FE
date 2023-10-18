@@ -22,7 +22,7 @@ const CreateServicePage = () => {
 
   const onSubmit = async (values: any) => {
     values.image_url =
-      "https://res.cloudinary.com/dn163fium/image/upload/v1697264013/ebej6gnvmtxfc7g6xy6h.jpg";
+      "https://i.ibb.co/0BQFvP7/service-4.jpg";
     values.price = parseInt(values.price);
     values.category_id = ppCategoryId;
     try {
@@ -112,7 +112,7 @@ const CreateServicePage = () => {
                 />
               </Col>
 
-              {/* <Col
+              <Col
                 className="gutter-row"
                 span={8}
                 style={{
@@ -124,7 +124,7 @@ const CreateServicePage = () => {
                   label="Category"
                   onChange={(e) => setPpCategoryId(e)}
                 />
-              </Col> */}
+              </Col>
 
               <Col
                 className="gutter-row"

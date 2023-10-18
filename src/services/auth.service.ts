@@ -2,6 +2,8 @@ import { authKey } from "@/constants/storageKey";
 import { decodedToken } from "@/utils/jwt";
 import { getFromLocalStorage, setToLocalStorage } from "@/utils/localStorage";
 
+//auth service
+
 export const storeUserInfo = ({ accessToken }: { accessToken: string }) => {
   return setToLocalStorage(authKey, accessToken as string);
 };

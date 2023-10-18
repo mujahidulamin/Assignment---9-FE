@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { Button } from "antd";
 
 const ServiceCard = ({ service }: any) => {
   return (
@@ -25,17 +26,9 @@ const ServiceCard = ({ service }: any) => {
           </span>
         </p>
         <div className="flex-grow"></div>
-        <div className="button_part flex justify-end">
+        <div className="button_part flex justify-center">
           <Link href={`/services/details/${service?._id}`}>
-            <p className="group mt-4 inline-flex items-center gap-1 text-sm font-medium text-[#8B8BCF]">
-              See details
-              <span
-                aria-hidden="true"
-                className="block transition-all group-hover:ms-0.5 rtl:rotate-180"
-              >
-                &rarr;
-              </span>
-            </p>
+            <Button htmlType="submit"> View Details</Button>
           </Link>
         </div>
       </div>

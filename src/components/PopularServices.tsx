@@ -4,6 +4,7 @@ import SkeletonCard from "./shared/SkeletonCard";
 import { useServicesQuery } from "@/redux/api/serviceApi";
 import ServiceCard from "./shared/ServiceCard";
 import Link from "next/link";
+import { Button } from "antd";
 
 const PopularServices = () => {
   const query: Record<string, any> = {};
@@ -35,17 +36,9 @@ const PopularServices = () => {
             <ServiceCard service={service} key={service?._id} />
           ))}
         </div>
-        <div className="button_part flex justify-center mt-5">
+        <div className="flex justify-center py-10">
           <Link href={`/services`}>
-            <p className="group mt-4 inline-flex items-center gap-1 text-sm font-medium text-[#8B8BCF]">
-              View All Services
-              <span
-                aria-hidden="true"
-                className="block transition-all group-hover:ms-0.5 rtl:rotate-180"
-              >
-                &rarr;
-              </span>
-            </p>
+            <Button htmlType="submit">View All Services</Button>
           </Link>
         </div>
       </div>

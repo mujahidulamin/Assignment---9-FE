@@ -8,7 +8,7 @@ import { useGetFeedbackQuery } from "@/redux/api/feedbackApi";
 const Testimonials = () => {
 
     const { data, isLoading } = useGetFeedbackQuery({});
-  console.log(data)
+
   return (
 
     <section className="bg-white my-10 max-w-[1200px] mx-auto">

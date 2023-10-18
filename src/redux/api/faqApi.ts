@@ -3,6 +3,9 @@ import { tagTypes } from "../tagTypes";
 import { baseApi } from "./baseApi";
 const FAQ_URL = "/faq";
 
+
+//faq api
+
 export const faqApi = baseApi.injectEndpoints({
   endpoints: (build) => ({
     getAllFaq: build.query({

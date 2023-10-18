@@ -2,6 +2,9 @@ import { tagTypes } from "../tagTypes";
 import { baseApi } from "./baseApi";
 const APPOINTMENT_API = "/appointment";
 
+
+
+
 export const appointmentApi = baseApi.injectEndpoints({
   endpoints: (build) => ({
     singleAppointment: build.query({

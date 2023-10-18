@@ -1,3 +1,5 @@
+//sidebar items
+
 import type { MenuProps } from "antd";
 import {
   TableOutlined,

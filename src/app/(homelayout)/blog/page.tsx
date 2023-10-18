@@ -13,7 +13,7 @@ const BlogPage = () => {
     <section className="min-h-screen max-w-[1200px] mx-auto">
       <div className="container px-6 py-10 mx-auto space-y-8">
         <div className="text-center">
-          <h1 className="text-2xl font-semibold text-gray-800 capitalize lg:text-6xl lg:font-bold mb-16">
+          <h1 className="text-2xl font-semibold text-gray-800 capitalize lg:text-5xl lg:font-bold mb-16">
             Blogs
           </h1>
         </div>

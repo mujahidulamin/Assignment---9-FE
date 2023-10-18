@@ -23,6 +23,8 @@ const UpcomingServices = () => {
   query["sortOrder"] = sortOrder;
 
   const { data, isLoading } = useUpcomingServicesQuery({ ...query });
+
+  console.log(data)
   return (
     <section className="bg-white my-10 max-w-[1200px] mx-auto">
       <div className="px-6 py-10">

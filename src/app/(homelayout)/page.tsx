@@ -1,5 +1,5 @@
 import RecentServices from "@/components/PopularServices";
-import heroImage from "../../assets/heroImage.png";
+import heroImage from "../../assets/car-banner.jpg";
 import Image from "next/image";
 import PopularServices from "@/components/PopularServices";
 import AboutUs from "@/components/AboutUs";
@@ -11,74 +11,39 @@ import News from "@/components/News";
 import Overview from "@/components/Overview";
 import Category from "@/components/Category";
 
+
+
 export default function Home() {
   return (
     <>
-      <div className="flex flex-col">
-        <div className="relative w-full max-h-[800px] ">
-          <div className="flex md:hidden absolute inset-0 bg-gradient-to-r from-black to-transparent mix-blend-multiply"></div>
-          <Image
+      <div className="bg-gray-50 relative px-4 pt-16 mx-auto lg:py-32 md:px-8 xl:px-20 sm:max-w-xl md:max-w-full">
+      <div className="max-w-xl mx-auto lg:max-w-screen-xl">
+        <div className="mb-16 lg:max-w-lg lg:mb-0">
+          <div className="max-w-xl mb-6">
+            <div>
+              <p className="inline-block py-px mb-4 text-xs font-semibold tracking-wider text-teal-900 uppercase rounded-full bg-teal-accent-400">
+                Brand new
+              </p>
+            </div>
+            <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none">
+            Revive Your Ride: Expert Car Repairs, Exceptional Results!
+             
+            </h2>
+            <p className="text-base text-gray-700 md:text-lg">
+            At Car Repair, we understand the vital role your vehicle plays in your daily life. Our expert team of skilled technicians is here to ensure your car runs smoothly, efficiently, and safely on the road. With a commitment to excellence and a passion for all things automotive, we offer a comprehensive range of car repair services that cater to your specific needs.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div className="flex justify-center h-full overflow-hidden lg:w-2/3 xl:w-1/2 lg:absolute lg:justify-start lg:bottom-0 lg:right-0 lg:items-end">
+      <Image
             className="w-full max-h-[800px]"
             src={heroImage}
             width={10000}
             alt="Hero image"
           />
-          <div className="absolute top-1/2 md:top-1/3 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center md:left-[800px] md:text-left md:transform-none">
-            <div>
-              <h1 className="mb-3 text-4xl font-bold text-white md:text-gray-900 md:text-5xl md:leading-tight md:font-extrabold">
-                Quality Wallpapers
-              </h1>
-              <h1 className="hidden md:flex md:text-gray-900 text-2xl md:ms-7">
-                Paintings For Home
-              </h1>
-            </div>
-            <div className="mt-10 space-y-3 text-xs text-white md:text-gray-600 md:mt-5 md:flex md:flex-row md:justify-center md:space-x-8 md:space-y-0">
-              <div className="flex items-center">
-                <svg
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                  className="w-4 h-4 mr-1 text-green-600"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                    clipRule="evenodd"
-                  ></path>
-                </svg>
-                No credit card required
-              </div>
-              <div className="flex items-center">
-                <svg
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                  className="w-4 h-4 mr-1 text-green-600"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                    clipRule="evenodd"
-                  ></path>
-                </svg>
-                No commitment
-              </div>
-              <div className="flex items-center">
-                <svg
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                  className="w-4 h-4 mr-1 text-green-600"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                    clipRule="evenodd"
-                  ></path>
-                </svg>
-                Cancel anytime
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
+    </div>
       <PopularServices />
       <UpcomingServices />
       <News />

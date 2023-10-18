@@ -112,7 +112,7 @@ const CreateServicePage = () => {
                 />
               </Col>
 
-              <Col
+              {/* <Col
                 className="gutter-row"
                 span={8}
                 style={{
@@ -124,7 +124,7 @@ const CreateServicePage = () => {
                   label="Category"
                   onChange={(e) => setPpCategoryId(e)}
                 />
-              </Col>
+              </Col> */}
 
               <Col
                 className="gutter-row"

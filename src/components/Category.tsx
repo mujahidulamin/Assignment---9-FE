@@ -11,9 +11,8 @@ const Category = () => {
       <div className="px-6 py-10">
         <div className="text-center">
           <h1 className="text-2xl font-semibold text-gray-800 capitalize lg:text-4xl lg:font-bold ">
-            Featured <span className="text-teal-600">Category</span>
+            Service By Category
           </h1>
-          <p className="mt-4 text-gray-500">Our product Featured Category!</p>
         </div>
 
         <div className="grid grid-cols-1 gap-8 mt-8 md:mt-16 md:grid-cols-3 xl:grid-cols-3">

@@ -46,10 +46,10 @@ export default function Home() {
     </div>
       <PopularServices />
       <UpcomingServices />
-      <News />
       <Category />
       <Overview />
       <Testimonials />
+      <News />
       <Stats />
       <Gallery />
       <AboutUs />

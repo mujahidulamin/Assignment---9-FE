@@ -22,7 +22,7 @@ const NavBar = () => {
       key: "0",
       label: (
         <Link href="/profile">
-          <Button type="text">Profile</Button>
+          <Button type="text">My Profile</Button>
         </Link>
       ),
     },

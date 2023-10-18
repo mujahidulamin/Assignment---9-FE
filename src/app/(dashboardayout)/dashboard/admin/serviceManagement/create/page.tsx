@@ -58,10 +58,7 @@ const CreateServicePage = () => {
       />
 
       <div>
-        <h1 className="text-center text-4xl font-bold leadi">Add Service</h1>
-        <div className="max-w-[300px] mx-auto mt-3">
-          <hr className="border-t-1 border-gray-500" />
-        </div>
+        <h1 className="text-center text-4xl font-bold leadi">Add Car Service</h1>
       </div>
 
       <div className="mt-10">

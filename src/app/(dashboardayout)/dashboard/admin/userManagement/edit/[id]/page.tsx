@@ -69,7 +69,7 @@ const EditUserPage = ({ params }: IDProps) => {
       <div className="flex justify-center">
         <Form submitHandler={onSubmit} defaultValues={defaultValues}>
           <div
-            className="md:mx-0 max-w-[500px] mx-auto mt-10"
+            className="md:mx-0 max-w-[800px] mx-auto mt-10"
             style={{
               border: "1px solid #d9d9d9",
               borderRadius: "5px",
@@ -78,14 +78,14 @@ const EditUserPage = ({ params }: IDProps) => {
             }}
           >
             <Row gutter={[16, 16]}>
-              <Col xs={24} sm={12} md={12} lg={12} style={{ margin: "10px 0" }}>
+              <Col xs={24} sm={12} md={24} lg={24} style={{ margin: "10px 0" }}>
                 <FormInput
                   name="name.firstName"
                   label="First name"
                   size="large"
                 />
               </Col>
-              <Col xs={24} sm={12} md={12} lg={12} style={{ margin: "10px 0" }}>
+              <Col xs={24} sm={12} md={24} lg={24} style={{ margin: "10px 0" }}>
                 <FormInput
                   name="name.lastName"
                   label="Last name"
@@ -103,7 +103,7 @@ const EditUserPage = ({ params }: IDProps) => {
                 <FormInput name="email" label="Email" size="large" />
               </Col>
             </Row>
-            <div className="flex md:justify-end justify-center mt-5">
+            <div className="flex justify-center mt-5">
               <Button htmlType="submit">Update</Button>
             </div>
           </div>

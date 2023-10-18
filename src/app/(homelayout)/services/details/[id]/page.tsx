@@ -12,6 +12,7 @@ import { Rate, message } from "antd";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import { Button } from "antd";
 
 type IDProps = {
   params: any;
@@ -65,32 +66,35 @@ const ServiceDetailsPage = ({ params }: IDProps) => {
           ]}
         />
       </div>
+
+      <div className="">
+                <Image
+                  height={100}
+                  width={100}
+                  alt=""
+                  src={data?.image_url}
+                  className="w-[50%] rounded-lg  shadow-sm mx-auto"
+                />
+              </div>
+
+
+
       <div>
         <div className="flex justify-center pt-10 pb-20 mx-5 md:mx-0">
-          <div className="rounded-lg border border-gray-200 p-4 sm:p-6 lg:p-8 w-[500px] shadow-md">
-            <div className="flex justify-between gap-4">
+          <div className="rounded-lg border border-gray-200 p-4 sm:p-6 lg:p-8 w-[50%] shadow-md">
+            <div className="">
               <div>
-                <h3 className="text-lg font-bold text-gray-900 sm:text-xl">
+                <h1 className="text-lg font-bold text-gray-900 sm:text-xl">
                   {data?.name}
-                </h3>
+                </h1>
 
                 <p className="mt-1 text-xs font-medium text-gray-600">
                   Price: ${data?.price}
                 </p>
               </div>
-
-              <div className="">
-                <Image
-                  height={100}
-                  width={100}
-                  alt="Paul Clapton"
-                  src={data?.image_url}
-                  className="h-16 w-16 rounded-lg object-cover shadow-sm"
-                />
-              </div>
             </div>
             <div className="mt-4">
-              <p className="max-w-[40ch] text-sm text-gray-500">
+              <p className="text-sm text-gray-500 text-justify">
                 <span className="font-semibold">Description:</span>{" "}
                 {data?.description}
               </p>
@@ -104,17 +108,9 @@ const ServiceDetailsPage = ({ params }: IDProps) => {
               data?.availability ?
 
               <>
-              <div className="flex justify-end">
+              <div className="flex justify-center">
               <Link href={`/appointment/${id}`}>
-                <p className="group mt-4 inline-flex items-center gap-1 text-sm font-medium text-[#8B8BCF]">
-                  Book an appointment
-                  <span
-                    aria-hidden="true"
-                    className="block transition-all group-hover:ms-0.5 rtl:rotate-180"
-                  >
-                    &rarr;
-                  </span>
-                </p>
+                <Button htmlType="submit"> Book Service</Button>
               </Link>
             </div>
               </>
@@ -134,20 +130,50 @@ const ServiceDetailsPage = ({ params }: IDProps) => {
         <div className="mx-4 md:mx-20">
           {" "}
           <hr />
-          <div className="my-5 md:my-10 flex flex-col md:flex-row md:justify-between gap-5 md:gap-20">
-            <div className="md:mt-3 md:w-1/2">
+
+           <div>
+           <form onSubmit={handleAddComment} className=" md:mt-5 mt-6">
+              {" "}
+              <textarea
+                id="message"
+                name="message"
+                className="block p-2.5 w-[100%] text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-teal-600 focus:border-teal-600"
+                placeholder="Write your thoughts here..."
+              ></textarea>
+ <div className="m-3 flex justify-center my-6">
+                <Rate onChange={setValue} value={value} />
+              </div>
+
+              {userId ? (
+                <div className="flex justify-center mt-6">
+                  <Button htmlType="submit"> Submit</Button>
+                </div>
+              ) : (
+                <div className="flex justify-center mt-2">
+                  <small className="text-blue-400">
+                    Please Login First
+                  </small>
+                </div>
+              )}
+            </form>
+           </div>
+
+
+
+          <div className="my-5 md:my-10 flex flex-col gap-5 md:gap-20">
+            <div className="md:mt-3">
               {" "}
               {reviews?.map((review: any, index: any) => (
                 <article
                   key={index}
-                  className="rounded-xl shadow-sm border border-gray-200 p-4 my-3 min-w-[300px] md:min-w-[500px]"
+                  className="rounded-xl shadow-sm border border-gray-200 p-4 my-3 w-[100%]"
                 >
                   <div className="flex items-center gap-4">
                     <Image
                       height={100}
                       width={100}
                       alt="Developer"
-                      src={`https://source.unsplash.com/301x301/?profile/?${index}`}
+                      src={`https://img.freepik.com/premium-vector/man-avatar-profile-round-icon_24640-14044.jpg?${index}`}
                       className="h-16 w-16 rounded-full object-cover"
                     />
                     <div>
@@ -168,38 +194,7 @@ const ServiceDetailsPage = ({ params }: IDProps) => {
                 </article>
               ))}
             </div>
-            <form onSubmit={handleAddComment} className="md:w-1/2 md:mt-5 mt-0">
-              {" "}
-              <textarea
-                id="message"
-                name="message"
-                className="block p-2.5 w-full md:w-[400px] h-[150px] text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-teal-600 focus:border-teal-600"
-                placeholder="Write your thoughts here..."
-              ></textarea>
- <div className="m-3">
-                <Rate onChange={setValue} value={value} />
-              </div>
-
-              {userId ? (
-                <div className="flex justify-center mt-6">
-                  <button
-                    type="submit"
-                    className="group relative inline-block text-sm font-medium text-teal-600 focus:outline-none active:text-teal-600"
-                  >
-                    <span className="absolute inset-0 border border-current rounded-md"></span>
-                    <span className="block border border-current bg-white px-8 md:px-12 py-3 rounded-md transition-transform group-hover:-translate-x-1 group-hover:-translate-y-1">
-                      Submit
-                    </span>
-                  </button>
-                </div>
-              ) : (
-                <div className="flex justify-center mt-2">
-                  <small className="text-violet-400">
-                    Please Login First to Comment
-                  </small>
-                </div>
-              )}
-            </form>
+          
           </div>
         </div>
       </div>

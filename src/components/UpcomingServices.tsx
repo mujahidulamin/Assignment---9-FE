@@ -25,14 +25,14 @@ const UpcomingServices = () => {
   const { data, isLoading } = useUpcomingServicesQuery({ ...query });
 
   return (
-    <section className="bg-white my-10 max-w-[1200px] mx-auto">
-      <div className="px-6 py-10">
+    <section className="bg-white mt-12 max-w-[1200px] mx-auto">
+      <div className="px-6 ">
         <div className="text-center">
-          <h1 className="text-2xl font-semibold text-gray-800 capitalize lg:text-4xl lg:font-bold ">
+          <h1 className="text-2xl font-semibold text-gray-800 capitalize lg:text-4xl lg:font-bold mb-16">
             Upcoming Services
           </h1>
         </div>
-        <div className="grid grid-cols-1 gap-8 mt-8 md:mt-16 md:grid-cols-2 xl:grid-cols-4">
+        <div className="grid gap-8 row-gap-5 mb-8 lg:grid-cols-3 lg:row-gap-8">
           {isLoading && [1, 2, 3, 4].map((n) => <SkeletonCard key={n} />)}
           {data?.upcomingServices?.map((service: any) => (
             <ServiceCard service={service} key={service?.id} />

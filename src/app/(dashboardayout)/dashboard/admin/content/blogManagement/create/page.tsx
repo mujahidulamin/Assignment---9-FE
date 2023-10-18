@@ -14,7 +14,7 @@ const CreateBlogPage = () => {
   const router = useRouter();
 
   const onSubmit = async (values: any) => {
-    values.image_url = "https://example.com/painting-blog10.jpg";
+    values.image_url = "https://i.ibb.co/t4CKg24/blogs-1.jpg";
     try {
       const response = await addBlog(values).unwrap();
       if (response?._id) {

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import car from "../../assets/car.jpg";
+import car from "../../assets/car.png";
 
 const Footer = () => {
   return (

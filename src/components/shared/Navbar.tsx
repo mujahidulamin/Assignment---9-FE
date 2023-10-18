@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import car from "../../assets/car.jpg";
+import car from "../../assets/car.png";
 import { getUserInfo, removeUserInfo } from "@/services/auth.service";
 import { useRouter } from "next/navigation";
 import { authKey } from "@/constants/storageKey";

@@ -1,32 +1,18 @@
 const AboutUs = () => {
   return (
-    <section className="bg-[#F3F4F6] my-10 ">
+    <section className="my-16">
       <div className="px-6 py-10 max-w-[1200px] mx-auto">
         <div className="text-center">
           <h1 className="text-2xl font-semibold text-gray-800 capitalize lg:text-4xl lg:font-bold ">
-            About <span className="text-teal-600">Us</span>
+            About Us
           </h1>
-
-          <p className="max-w-lg mx-auto mt-4 text-gray-500">
-            Know our services and how we can help you
-          </p>
         </div>
 
-        <div className="mt-8 md:mt-10">
+        <div className="mt-8 md:mt-10 text-justify">
           <h1>
-            Welcome to our premier painting services platform, where artistry
-            meets excellence. At Prime Palette, we redefine aesthetics
-            with a brushstroke of proficiency. As a distinguished destination
-            for discerning clients, we seamlessly blend creativity with
-            precision. Our skilled artisans, curated from a pool of talent,
-            breathe life into walls, transforming spaces into captivating
-            canvases. Meticulously crafted, our painting services transcend mere
-            color application, embodying a fusion of technique and innovation.
-            Committed to elevating your surroundings, we specialize in tailored
-            solutions that reflect your unique style. Explore a palette of
-            possibilities with us, where each stroke narrates a story of
-            elegance and sophistication. Your vision, our expertise a
-            masterpiece in every project.
+          At Car Repair, we are passionate about cars and dedicated to providing top-notch car repair and maintenance services. With years of experience in the automotive industry, our skilled technicians are committed to ensuring your vehicle runs smoothly and safely on the road.
+
+          Our mission is to deliver exceptional car repair services, focusing on quality, honesty, and customer satisfaction. We understand the importance of your vehicle in your daily life, and we strive to offer reliable and efficient solutions to all your automotive needs. Whether it's a routine maintenance check, minor repairs, or major overhauls, we have the expertise and tools to get the job done right.
           </h1>
         </div>
       </div>

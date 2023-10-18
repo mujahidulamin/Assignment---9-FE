@@ -81,13 +81,13 @@ export default function Home() {
       </div>
       <PopularServices />
       <UpcomingServices />
-      <AboutUs />
       <News />
       <Category />
       <Overview />
       <Testimonials />
       <Stats />
       <Gallery />
+      <AboutUs />
     </>
   );
 }

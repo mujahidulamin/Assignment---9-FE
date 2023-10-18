@@ -7,7 +7,7 @@ const Gallery = () => {
 
 <div className="text-center mb-16">
         <h1 className="text-2xl font-semibold text-gray-800 capitalize lg:text-4xl lg:font-bold ">
-          Our Gellery
+          Our Gallery
         </h1>
 
       </div>

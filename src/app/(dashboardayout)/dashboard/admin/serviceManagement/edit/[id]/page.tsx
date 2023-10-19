@@ -86,16 +86,16 @@ const EditServicePage = ({ params }: IDProps) => {
       <div className="flex justify-center">
         <Form submitHandler={onSubmit} defaultValues={defaultValues}>
           <div
-            className="md:mx-0 max-w-[500px] mx-auto mt-10"
+            className="md:mx-0 max-w-[800px] mx-auto mt-10"
             style={{
               border: "1px solid #d9d9d9",
               borderRadius: "5px",
               padding: "15px",
-              marginBottom: "10px",
+              marginBottom: "5px",
             }}
           >
             <Row gutter={[16, 16]}>
-              <Col xs={24} sm={12} md={12} lg={12} style={{ margin: "10px 0" }}>
+              <Col xs={24} sm={12} md={24} lg={24} style={{ margin: "5px 0" }}>
                 <FormInput
                   name="name"
                   type="text"
@@ -103,14 +103,14 @@ const EditServicePage = ({ params }: IDProps) => {
                   label="Service Name"
                 />
               </Col>
-              <Col xs={24} sm={12} md={12} lg={12} style={{ margin: "10px 0" }}>
+              <Col xs={24} sm={12} md={24} lg={24} style={{ margin: "5px 0" }}>
                 <PPCategoryFields
                   name="category_id"
                   label="Category"
                   onChange={(e) => setPpCategoryId(e)}
                 />
               </Col>
-              <Col xs={24} sm={12} md={12} lg={12} style={{ margin: "10px 0" }}>
+              <Col xs={24} sm={12} md={24} lg={24} style={{ margin: "5px 0" }}>
                 <FormSelectField
                   size="large"
                   name="availability"
@@ -119,7 +119,7 @@ const EditServicePage = ({ params }: IDProps) => {
                   placeholder="Select"
                 />
               </Col>
-              <Col xs={24} sm={12} md={12} lg={12} style={{ margin: "10px 0" }}>
+              <Col xs={24} sm={12} md={24} lg={24} style={{ margin: "5px 0" }}>
                 <FormInput
                   name="price"
                   type="text"
@@ -127,7 +127,7 @@ const EditServicePage = ({ params }: IDProps) => {
                   label="Service Price"
                 />
               </Col>
-              <Col xs={24} sm={12} md={24} lg={24} style={{ margin: "10px 0" }}>
+              <Col xs={24} sm={12} md={24} lg={24} style={{ margin: "5px 0" }}>
                 <FormInput
                   name="description"
                   type="text"
@@ -136,7 +136,7 @@ const EditServicePage = ({ params }: IDProps) => {
                 />
               </Col>
             </Row>
-            <div className="flex md:justify-end justify-center mt-5">
+            <div className="flex justify-center mt-5">
               <Button htmlType="submit">Update</Button>
             </div>
           </div>

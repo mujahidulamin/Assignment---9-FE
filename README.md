@@ -2,6 +2,23 @@
 
 ## Live Site Link of this project: [Car Repair](https://car-repair-frontend.vercel.app/)
 
+
+## User access Email Password
+
+userEmail: mujahidulamin1108152@gmail.com 
+userPassword: 123456
+
+## Admin access Email Password
+
+adminEmail: habib@gmail.com 
+adminPassword: 123456
+
+## Super Admin access Email Password
+
+adminEmail: tareq@gmail.com
+adminPassword: 123456
+
+
 ## Some Features and functionality: 
 
 # User
@@ -26,7 +43,7 @@
 * Booking management system for administrators to view and manage bookings.
 * Admins can accept, reject, or adjust schedules as needed.
 * Content management system for administrators to control blog and faq from dashboard.
-* admin can manage their profiles 
+* Admin can manage their profiles 
 
 
 # Super Admin 
@@ -50,3 +67,6 @@
 * MongoDB
 * Typescript
 * Mongoose
+
+
+

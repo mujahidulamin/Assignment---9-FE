@@ -36,10 +36,7 @@ const ViewFAQPage = ({ params }: IDProps) => {
       />
 
       <div>
-        <h1 className="text-center text-4xl font-bold leadi">View FAQ</h1>
-        <div className="max-w-[300px] mx-auto mt-3">
-          <hr className="border-t-1 border-gray-500" />
-        </div>
+        <h1 className="text-center text-4xl font-bold leadi">Your Posted FAQ</h1>
       </div>
 
       <div className="mt-10">
@@ -51,17 +48,7 @@ const ViewFAQPage = ({ params }: IDProps) => {
             marginBottom: "10px",
           }}
         >
-          <article className="flex bg-white transition hover:shadow-xl rounded-md">
-            <div className="hidden sm:block sm:basis-56">
-              <Image
-                alt="Guitar"
-                height={200}
-                width={200}
-                src="https://source.unsplash.com/200x200/?house"
-                className="aspect-square h-full w-full object-cover"
-              />
-            </div>
-
+          <article className="flex transition rounded-md">
             <div className="flex flex-1 flex-col justify-between">
               <div className="border-s border-gray-900/10 p-4 sm:border-l-transparent sm:p-6">
                 <a href="#">

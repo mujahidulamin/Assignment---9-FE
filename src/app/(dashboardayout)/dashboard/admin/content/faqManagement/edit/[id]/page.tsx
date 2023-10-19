@@ -64,7 +64,7 @@ const EditFAQPage = ({ params }: IDProps) => {
       <div className="flex justify-center">
         <Form submitHandler={onSubmit} defaultValues={defaultValues}>
           <div
-            className="md:mx-0 max-w-[500px] mx-auto mt-10"
+            className="md:mx-0 max-w-[800px] mx-auto mt-10"
             style={{
               border: "1px solid #d9d9d9",
               borderRadius: "5px",
@@ -90,7 +90,7 @@ const EditFAQPage = ({ params }: IDProps) => {
                 />
               </Col>
             </Row>
-            <div className="flex md:justify-end justify-center mt-5">
+            <div className="flex justify-center mt-5">
               <Button htmlType="submit">Update</Button>
             </div>
           </div>

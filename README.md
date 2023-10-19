@@ -15,8 +15,8 @@ adminPassword: 123456
 
 ## Super Admin access Email Password
 
-adminEmail: tareq@gmail.com
-adminPassword: 123456
+superAdminEmail: tareq@gmail.com
+superAdminPassword: 123456
 
 
 ## Some Features and functionality: 

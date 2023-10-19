@@ -85,23 +85,23 @@ const EditBookingPage = ({ params }: IDProps) => {
       <div className="flex justify-center">
         <Form submitHandler={onSubmit} defaultValues={defaultValues}>
           <div
-            className="md:mx-0 max-w-[500px] mx-auto mt-10"
+            className="md:mx-0 max-w-[1000px] mx-auto mt-10"
             style={{
               border: "1px solid #d9d9d9",
               borderRadius: "5px",
               padding: "15px",
-              marginBottom: "10px",
+              marginBottom: "5px",
             }}
           >
             <Row gutter={[16, 16]}>
-              <Col xs={24} sm={12} md={12} lg={12} style={{ margin: "10px 0" }}>
+              <Col xs={24} sm={12} md={24} lg={24} style={{ margin: "5px 0" }}>
                 <FormDatePicker
                   name="appointment_date"
                   label="Appointment Date"
                   size="large"
                 />
               </Col>
-              <Col xs={24} sm={12} md={12} lg={12} style={{ margin: "10px 0" }}>
+              <Col xs={24} sm={12} md={24} lg={24} style={{ margin: "10px 0" }}>
                 <FormSelectField
                   size="large"
                   name="appointment_status"
@@ -111,7 +111,7 @@ const EditBookingPage = ({ params }: IDProps) => {
                 />
               </Col>
             </Row>
-            <div className="flex md:justify-end justify-center mt-5">
+            <div className="flex justify-center mt-5">
               <Button htmlType="submit">Update</Button>
             </div>
           </div>

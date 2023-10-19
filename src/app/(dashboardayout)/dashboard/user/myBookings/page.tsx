@@ -33,12 +33,8 @@ const BookingPage = () => {
       <div className="container flex flex-col justify-center px-6 py-10 mx-auto mb-20">
         <div className="text-center">
           <h1 className="text-2xl font-semibold text-gray-800 capitalize lg:text-4xl lg:font-bold ">
-            My <span className="text-teal-600">Bookings</span>
+            My Bookings
           </h1>
-
-          <p className="max-w-lg mx-auto mt-4 text-gray-500">
-            See all your bookings status here. Cancel anytime
-          </p>
         </div>
         <div className="flex justify-center mt-8">
           <div

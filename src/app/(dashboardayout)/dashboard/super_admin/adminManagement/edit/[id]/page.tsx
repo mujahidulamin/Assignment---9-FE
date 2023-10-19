@@ -93,28 +93,28 @@ const EditAdminPage = ({ params }: IDProps) => {
             }}
           >
             <Row gutter={[16, 16]}>
-              <Col xs={24} sm={12} md={12} lg={12} style={{ margin: "10px 0" }}>
+              <Col xs={24} sm={12} md={24} lg={24} style={{ margin: "5px 0" }}>
                 <FormInput
                   name="name.firstName"
                   label="First name"
                   size="large"
                 />
               </Col>
-              <Col xs={24} sm={12} md={12} lg={12} style={{ margin: "10px 0" }}>
+              <Col xs={24} sm={12} md={24} lg={24} style={{ margin: "5px 0" }}>
                 <FormInput
                   name="name.lastName"
                   label="Last name"
                   size="large"
                 />
               </Col>
-              <Col xs={24} sm={12} md={12} lg={12} style={{ margin: "10px 0" }}>
+              <Col xs={24} sm={12} md={24} lg={24} style={{ margin: "5px 0" }}>
                 <FormInput
                   name="mobileNumber"
                   label="Mobile number"
                   size="large"
                 />
               </Col>
-              <Col xs={24} sm={12} md={12} lg={12} style={{ margin: "10px 0" }}>
+              <Col xs={24} sm={12} md={24} lg={24} style={{ margin: "5px 0" }}>
                 <FormSelectField
                   size="large"
                   name="role"
@@ -123,11 +123,11 @@ const EditAdminPage = ({ params }: IDProps) => {
                   placeholder="Select"
                 />
               </Col>
-              <Col xs={24} sm={12} md={24} lg={24} style={{ margin: "10px 0" }}>
+              <Col xs={24} sm={12} md={24} lg={24} style={{ margin: "5px 0" }}>
                 <FormInput name="email" label="Email" size="large" />
               </Col>
             </Row>
-            <div className="flex md:justify-end justify-center mt-5">
+            <div className="flex justify-center mt-5">
               <Button htmlType="submit">Update</Button>
             </div>
           </div>

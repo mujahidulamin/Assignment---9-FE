@@ -68,7 +68,7 @@ const EditBlogPage = ({ params }: IDProps) => {
       <div className="flex justify-center">
         <Form submitHandler={onSubmit} defaultValues={defaultValues}>
           <div
-            className="md:mx-0 max-w-[500px] mx-auto mt-10"
+            className="md:mx-0 max-w-[800px] mx-auto mt-10"
             style={{
               border: "1px solid #d9d9d9",
               borderRadius: "5px",
@@ -77,7 +77,7 @@ const EditBlogPage = ({ params }: IDProps) => {
             }}
           >
             <Row gutter={[16, 16]}>
-              <Col xs={24} sm={12} md={12} lg={12} style={{ margin: "10px 0" }}>
+              <Col xs={24} sm={12} md={24} lg={24} style={{ margin: "5px 0" }}>
                 <FormInput
                   name="title"
                   type="text"
@@ -85,7 +85,7 @@ const EditBlogPage = ({ params }: IDProps) => {
                   label="Title"
                 />
               </Col>
-              <Col xs={24} sm={12} md={12} lg={12} style={{ margin: "10px 0" }}>
+              <Col xs={24} sm={12} md={24} lg={24} style={{ margin: "5px 0" }}>
                 <FormInput
                   name="description"
                   type="text"
@@ -93,7 +93,7 @@ const EditBlogPage = ({ params }: IDProps) => {
                   label="Description"
                 />
               </Col>
-              <Col xs={24} sm={12} md={24} lg={24} style={{ margin: "10px 0" }}>
+              <Col xs={24} sm={12} md={24} lg={24} style={{ margin: "5px 0" }}>
                 <FormInput
                   name="views"
                   type="text"
@@ -102,7 +102,7 @@ const EditBlogPage = ({ params }: IDProps) => {
                 />
               </Col>
             </Row>
-            <div className="flex md:justify-end justify-center mt-5">
+            <div className="flex justify-center mt-5">
               <Button htmlType="submit">Update</Button>
             </div>
           </div>

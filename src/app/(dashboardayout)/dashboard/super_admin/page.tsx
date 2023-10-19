@@ -4,9 +4,9 @@ import Image from "next/image";
 
 const AdminPage = () => {
   return (
-    <div className="flex justify-center">
-      <Image src={SetupAnalytics} alt="" width={670} />
-    </div>
+    <div className="flex justify-center my-60">
+    <h1 className="lg:text-5xl text-2xl">Welcome To Super Admin Dashboard</h1>
+  </div>
   );
 };
 

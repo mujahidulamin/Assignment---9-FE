@@ -14,6 +14,8 @@ import { Button, Col, Row, message } from "antd";
 import { useAddServiceMutation } from "@/redux/api/serviceApi";
 import PPCategoryFields from "@/components/Forms/PPCategoryFields";
 import { useState } from "react";
+import { serviceSchema } from "@/schema/service";
+
 
 const CreateServicePage = () => {
   const [ppCategoryId, setPpCategoryId] = useState<string>();
@@ -62,7 +64,7 @@ const CreateServicePage = () => {
       </div>
 
       <div className="mt-10">
-        <Form submitHandler={onSubmit}>
+        <Form submitHandler={onSubmit} resolver={yupResolver(serviceSchema)}>
           <div
             style={{
               border: "1px solid #d9d9d9",

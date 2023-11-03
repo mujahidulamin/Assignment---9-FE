@@ -8,6 +8,9 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { useRouter } from "next/navigation";
 import { Button, Col, Row, message } from "antd";
 import { useAddBlogMutation } from "@/redux/api/blogApi";
+import { blogSchema } from "@/schema/blog";
+
+
 
 const CreateBlogPage = () => {
   const [addBlog] = useAddBlogMutation();
@@ -52,7 +55,7 @@ const CreateBlogPage = () => {
       </div>
 
       <div className="mt-10">
-        <Form submitHandler={onSubmit}>
+        <Form submitHandler={onSubmit} resolver={yupResolver(blogSchema)}>
           <div
             style={{
               border: "1px solid #d9d9d9",

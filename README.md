@@ -32,6 +32,8 @@ superAdminPassword: 123456
 - Users can leave reviews and ratings for services they have booked.
 - Users can cancel their bookings anytime if necessary.
 - Feedback forms for users to submit comments and suggestions.
+- User can view booking history, check booking statuses.
+- Users can add services to their booking.
 
 # Admin
 
